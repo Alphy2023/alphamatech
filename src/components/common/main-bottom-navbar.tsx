@@ -78,6 +78,16 @@ export const MainBottomNavbar = () =>{
         </nav>
         <AnimatePresence>
         {isSidebarOpen && (
+            <>
+             {/* Overlay background */}
+             <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40 z-40"
+              onClick={() => setIsSidebarOpen(false)} 
+            />
             <motion.div
             ref={sidebarRef}
             initial={{ x: "100%" }}
@@ -87,7 +97,6 @@ export const MainBottomNavbar = () =>{
             className="fixed top-0 right-0 h-full w-[250px] bg-commonBlackDark
             text-white shadow-lg z-50 p-4"
             >
-                
             <div className="flex flex-col gap-4 mt-4">
                 {menuItems.map((item, index) => (
                 <button
@@ -100,6 +109,7 @@ export const MainBottomNavbar = () =>{
                 ))}
             </div>
             </motion.div>
+            </>
       )}
         </AnimatePresence>
         </>
