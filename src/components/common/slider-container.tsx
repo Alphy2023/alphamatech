@@ -1,20 +1,34 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { SliderItem } from "@/components/common/slider-item";
 
 
-
-const Slide = ({ children }: { children: React.ReactNode }) => (
-  <div className="wow animate__fadeInUp">{children}</div>
-);
+// const Slide = ({ children }: { children: React.ReactNode }) => (
+//   <div className="wow animate__fadeInUp">{children}</div>
+// );
 
 export const SliderContainer = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
-    "This is the first slide.",
-    "This is the second slide.",
-    "This is the third slide.",
+  
+  const slides: React.ReactNode[] = [
+    <SliderItem 
+      key="1" 
+      backgroundImage="/tech-image-1.jpeg" 
+      text="This is the first slide." 
+    />,
+    <SliderItem 
+      key="2" 
+      backgroundImage="/tech-image-2.jpeg" 
+      text="This is the second slide." 
+    />,
+    <SliderItem 
+      key="3" 
+      backgroundImage="/tech-image-3.jpeg" 
+      text="This is the third slide." 
+    />,
   ];
+  
 
   // Automatically change the slide every 3 seconds
   useEffect(() => {
@@ -36,12 +50,18 @@ export const SliderContainer = () => {
           transform: `translateX(-${currentSlide * 100}%)`, // Slide effect
         }}
       >
-        {slides?.map((slide, index) => (
+         {slides?.map((slide, idx) => (
+          <div  key={idx}
+          className="slidep w-full flex-shrink-0">
+            {slide}
+          </div>
+        ))}
+        {/* {slides?.map((slide, index) => (
           <div key={index} className="slide w-full flex-shrink-0
           animate-fade">
             <Slide>{slide}</Slide>
           </div>
-        ))}
+        ))} */}
       </div>
        
     </div>
