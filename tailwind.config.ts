@@ -11,9 +11,29 @@ export default {
   ],
   theme: {
   	extend: {
+		screens: {
+			xs: "320px",
+			sm: "375px",
+			sml: "500px",
+			md: "667px",
+			mdl: "768px",
+			lg: "980px",
+			lgl: "1024x",
+			xl: "1280px",
+		  },
   		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
+			background: 'hsl(var(--background))',
+			foreground: 'hsl(var(--foreground))',
+			purpleLeft: '#6B46C1', 
+        	purpleRight: '#D6BCFA',
+			blueLeft: '#351EE0', 
+			blueRight: '#3F74EF',
+			commonBlack:"#05092B",
+			commonBlackDark:"#1D2142",
+			yellowColor:"#F8BC26",
+			textColor:"#737373",
+			borderColor:"#CCCCCC",
+			grayColor:"#F9F9F9",
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -57,7 +77,10 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		boxShadow: {
+			cardShadow: '0px 5px 60px rgba(0, 0, 0, 0.05)', // Custom reusable shadow
+		},
   	}
   },
   plugins: [require("tailwindcss-animate"),nextui()],

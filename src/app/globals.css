@@ -69,4 +69,13 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+ 
+}
+@layer components{
+  .container{
+    @apply ml-auto mr-auto
+  }
+}
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
 }
