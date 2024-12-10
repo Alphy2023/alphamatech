@@ -15,7 +15,6 @@ export const FeatureWrapper = () => {
           <FeatureCard/>
           <FeatureCard/>
           <FeatureCard/>
-          <FeatureCard/>
         </div>
     </div>
   )
@@ -28,10 +27,11 @@ const FeatureCard = () =>{
         w-fullp md:w-1/2p 
         xl:w-1/4p lg:w-1/4p md:w-1/3p 
         sm:w-1/2p
-        wow animate-tgfadeUp"
+        wow animate__fadeInUp"
         data-wow-duration="0.9s"
         data-wow-delay="0.3s"
-        style={{ animationDuration: '0.9s', animationDelay: '0.3s', animationName: 'tgfadeUp' }}
+        // style={{ animationDuration: '0.9s', animationDelay: '0.3s',
+        //  animationName: 'tgfadeUp' }}
         >
             <div className="bg-white rounded-[5px]
              shadow-cardShadow flex flex-col items-center justify-center

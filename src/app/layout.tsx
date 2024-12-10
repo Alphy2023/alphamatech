@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import WOWWrapper from "@/components/wow-wrapper"
 
 // Local font configuration
 const geistSans = localFont({
@@ -43,7 +44,9 @@ export default function RootLayout({
           fontFamily: `var(--font-poppins), var(--font-geist-sans), sans-serif`,
         }}
       >
+        <WOWWrapper>
         {children}
+        </WOWWrapper>
       </body>
     </html>
   );
