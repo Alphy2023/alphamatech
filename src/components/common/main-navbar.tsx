@@ -1,41 +1,41 @@
-"use client"
+// "use client"
 
-import React, {useState,useEffect} from 'react'
+// import React, {useState,useEffect} from 'react'
 import { MainBottomNavbar } from '@/components/common/main-bottom-navbar';
 import { MainTopNavbar } from '@/components/common/main-top-navbar';
 
 export const MainNavbar = () => {
-  const [showTopNavbar, setShowTopNavbar] = useState<boolean>(true);
-  const [showBottomNavbar, setShowBottomNavbar] = useState<boolean>(false);
-  const [lastScrollY, setLastScrollY] = useState<number>(0);
+  // const [showTopNavbar, setShowTopNavbar] = useState<boolean>(true);
+  // const [showBottomNavbar, setShowBottomNavbar] = useState<boolean>(false);
+  // const [lastScrollY, setLastScrollY] = useState<number>(0);
   
-  const handleScroll = (): void => {
-    const currentScrollY = window.scrollY;
+  // const handleScroll = (): void => {
+  //   const currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY) {
-      // Scrolling down
-      setShowTopNavbar(false);
-      setTimeout(() => setShowBottomNavbar(true), 200); // Delay bottom navbar appearance
-    } else {
-      // Scrolling up
-      if (currentScrollY <= 100) {
-        // Show both navbars when near top (hero section)
-        setShowTopNavbar(true);
-        setShowBottomNavbar(false);
-      } else {
-        setShowBottomNavbar(true); // Keep bottom navbar visible
-      }
-    }
+  //   if (currentScrollY > lastScrollY) {
+  //     // Scrolling down
+  //     setShowTopNavbar(false);
+  //     setTimeout(() => setShowBottomNavbar(true), 200); // Delay bottom navbar appearance
+  //   } else {
+  //     // Scrolling up
+  //     if (currentScrollY <= 100) {
+  //       // Show both navbars when near top (hero section)
+  //       setShowTopNavbar(true);
+  //       setShowBottomNavbar(false);
+  //     } else {
+  //       setShowBottomNavbar(true); // Keep bottom navbar visible
+  //     }
+  //   }
 
-    setLastScrollY(currentScrollY);
-  };
+  //   setLastScrollY(currentScrollY);
+  // };
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [lastScrollY]);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [lastScrollY]);
 
   
   return (
