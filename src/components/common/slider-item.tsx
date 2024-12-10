@@ -5,11 +5,14 @@ import React from "react";
 type SliderItemProps = {
   backgroundImage: string; // Path to the background image
   text: string; // Floating text on the slide
+  key:string;
 };
 
-export const SliderItem: React.FC<SliderItemProps> = ({ backgroundImage, text }) => {
+export const SliderItem: React.FC<SliderItemProps> = 
+({ backgroundImage, text,key }) => {
   return (
     <div
+    key={key}
       className="relative w-full h-[400px]
        flex items-center justify-center
         text-center bg-cover bg-center"

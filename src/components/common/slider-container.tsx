@@ -13,17 +13,17 @@ export const SliderContainer = () => {
   
   const slides: React.ReactNode[] = [
     <SliderItem 
-      // key="1" 
+      key="first-item" 
       backgroundImage="/tech-image-5.jpg" 
       text="This is the first slide." 
     />,
     <SliderItem 
-      // key="2" 
+      key="second-item" 
       backgroundImage="/tech-image-2.jpg" 
       text="This is the second slide." 
     />,
     <SliderItem 
-      // key="3" 
+      key="third-item" 
       backgroundImage="/tech-image-3.jpg" 
       text="This is the third slide." 
     />,
