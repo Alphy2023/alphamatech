@@ -6,8 +6,10 @@ export const FeatureWrapper = () => {
     <div className='relative 
     z-1 mt-[-100px]'>
         <div className='container p-3p flexp flex-wrap
-        w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
-        lg:grid-cols-4 xl:grid-cols-4
+        w-full grid grid-cols-1 
+        md:grid-cols-2 
+        mdl:grid-cols-3 
+        lgl:grid-cols-4 xl:grid-cols-4
         items-center gap-2'>
           <FeatureCard/>
           <FeatureCard/>
