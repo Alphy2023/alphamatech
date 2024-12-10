@@ -1,6 +1,6 @@
 "use client";
 
-import Reatc, { useEffect } from "react";
+import React, { useEffect } from "react";
 import WOW from "wow.js";
 import "animate.css/animate.min.css";
 
