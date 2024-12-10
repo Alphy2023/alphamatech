@@ -35,6 +35,7 @@ export default {
 			textColor:"#737373",
 			borderColor:"#CCCCCC",
 			grayColor:"#F9F9F9",
+			bodyBody: "#f1f1f4",
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
